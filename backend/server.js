@@ -7,9 +7,16 @@ const cors = require('cors');
 const app = express();
 
 // Middleware
+// CORS configuration
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000', 'https://your-frontend.vercel.app'],
-  credentials: true
+  origin: [
+    'http://localhost:5173',
+    'http://localhost:3000', 
+    'https://task-manager-frontend-two-eosin.vercel.app'
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
