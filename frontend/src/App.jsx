@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5001/api';
+const API_URL = 'https://task-manager-app-9a44.onrender.com/api';
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('token'));
